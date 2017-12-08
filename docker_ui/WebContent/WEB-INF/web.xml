@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+    <servlet>
+
+    <servlet-name>k8s</servlet-name>
+    <servlet-class>api.proxy.K8s</servlet-class>
+    <init-param>
+          <param-name>host</param-name>
+          <param-value>10.2.33.10:8080</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+    </servlet>
+	<servlet-mapping>
+	    <servlet-name>k8s</servlet-name>
+	    <url-pattern>/K8s/*</url-pattern>
+	</servlet-mapping>    
+    
+</web-app>

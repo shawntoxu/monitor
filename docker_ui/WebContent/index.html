@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+    <title>dui</title>
+    <link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="themes/color.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.easyui.min.js"></script>
+    <!--<script type="text/javascript">-->
+        <!--console.log(" debug == = " + window.location.href);-->
+<!--//        window.location.replace("")  ;-->
+        <!--history.pushState("", "", "web.html");-->
+    <!--</script>-->
+   <style type="text/css">
+*{
+	font-size:14px;
+}
+body {
+    font-family:verdana,helvetica,arial,sans-serif;
+    padding:20px;
+    font-size:12px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	padding:0 0 12px 0;
+}
+.demo-tip{
+	display:none;
+}
+
+   </style>
+<script type="text/javascript" src="ui.js"></script>
+   
+    </script>
+    <script type="text/javascript">
+    var ns_     = "default"
+    var url     = window.location.href ;
+    
+    //rc data var
+    var rc_data=[];
+
+    function changeArgs(value){
+      $("#cargs").val(value) ;
+    }
+
+    $(function(){
+        getResource("ec-retargeting") ;
+     });
+
+    </script>
+
+</head>
+<body>
+    <div id="namespace"></div>
+
+    <div style="width:80%;margin-left:100px;"  align="center">
+        <table id="pod_dg" title="实例情况" class="easyui-datagrid" style="width:100%;height:100%px"
+               url=""
+               toolbar="#toolbar" pagination="false"
+               rownumbers="true" fitColumns="true" singleSelect="true">
+            <thead>
+            <tr>
+                <th field="name" width="120">容器名</th>
+                <th field="status" width="40" align="center">容器状态</th>
+                <th field="app_status" width="40" align="center">APP状态</th>
+                <th field="hostip" width="100" align="center">主机ip</th>
+                <th field="containerip" width="100" align="center">容器IP</th>
+                <th field="age" width="40" align="left">运行时间</th>
+                <th field="cpu" width="40" align="left">cpu%</th>
+                <th field="mem" width="40" align="left">mem(MBytes)</th>
+                <th field="starttime" width="110"  hidden="true">time</th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id="toolbar">
+        <!--a href="javascript:void(0)" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="newUser()"></a-->
+    </div>
+    
+   
+  
+    <!--div style="float: right; margin-top: -520px">
+    <iframe id="podRes" width="600px" height="800px" scrolling="auto"  frameborder="0"/> 
+    </div-->
+    <style type="text/css">
+        #fm{
+            margin:0;
+            padding:10px 30px;
+        }
+        .ftitle{
+            font-weight:bold;
+            padding:5px 0;
+            margin-bottom:10px;
+            border-bottom:1px solid #ccc;
+        }
+        .fitem{
+            margin-bottom:5px;
+        }
+        .fitem label{
+            display:inline-block;
+            width:80px;
+        }
+        .fitem input{
+            width:160px;
+        }
+    </style>
+</body>
+</html>
