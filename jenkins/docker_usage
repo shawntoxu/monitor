@@ -1,0 +1,18 @@
+
+Alpine OS install python 
+
+apk add --update make cmake gcc g++ gfortran
+apk add --update python py-pip python-dev
+pip install cython
+pip install numpy
+
+pip install awscli 
+
+-------------------------------------
+
+jenkins 容器里运行 docker ps 
+Error response from daemon: client is newer than server (client API version: 1.24, server API version: 1.20)
+
+jenkins 里面的客户端api 高于宿主机，可以在jeninks 容器降级api等级
+export DOCKER_API_VERSION=1.20
+
